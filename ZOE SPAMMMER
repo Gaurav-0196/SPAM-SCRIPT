@@ -98,8 +98,8 @@ keyGui.Parent = player:WaitForChild("PlayerGui")
 
 -- Key System Frame
 local keyFrame = Instance.new("Frame")
-keyFrame.Size = UDim2.new(0, 300, 0, 200)
-keyFrame.Position = UDim2.new(0.5, -150, 0.5, -100)
+keyFrame.Size = UDim2.new(0, 280, 0, 180) -- More compact
+keyFrame.Position = UDim2.new(0.5, -140, 0.5, -90)
 keyFrame.BackgroundColor3 = Color3.fromRGB(20, 20, 30)
 keyFrame.BackgroundTransparency = 0.1
 keyFrame.BorderSizePixel = 0
@@ -111,14 +111,14 @@ keyCorner.Parent = keyFrame
 
 -- Key System Title
 local keyTitle = Instance.new("TextLabel")
-keyTitle.Size = UDim2.new(1, 0, 0, 40)
+keyTitle.Size = UDim2.new(1, 0, 0, 35)
 keyTitle.Position = UDim2.new(0, 0, 0, 0)
 keyTitle.BackgroundColor3 = Color3.fromRGB(30, 30, 45)
 keyTitle.BackgroundTransparency = 0.2
 keyTitle.TextColor3 = Color3.fromRGB(0, 255, 255)
 keyTitle.Text = " CHADDI GANG SPAMMER"
 keyTitle.Font = Enum.Font.GothamBold
-keyTitle.TextSize = 14
+keyTitle.TextSize = 13
 keyTitle.Parent = keyFrame
 
 local keyTitleCorner = Instance.new("UICorner")
@@ -127,26 +127,26 @@ keyTitleCorner.Parent = keyTitle
 
 -- Executor Info
 local executorInfo = Instance.new("TextLabel")
-executorInfo.Size = UDim2.new(1, -20, 0, 20)
-executorInfo.Position = UDim2.new(0, 10, 0, 45)
+executorInfo.Size = UDim2.new(1, -20, 0, 18)
+executorInfo.Position = UDim2.new(0, 10, 0, 40)
 executorInfo.BackgroundTransparency = 1
 executorInfo.TextColor3 = Color3.fromRGB(200, 200, 255)
 executorInfo.Text = "Executor: " .. CurrentExecutor
 executorInfo.Font = Enum.Font.Gotham
-executorInfo.TextSize = 11
+executorInfo.TextSize = 10
 executorInfo.Parent = keyFrame
 
 -- Key Input
 local keyInput = Instance.new("TextBox")
-keyInput.Size = UDim2.new(1, -20, 0, 35)
-keyInput.Position = UDim2.new(0, 10, 0, 70)
+keyInput.Size = UDim2.new(1, -20, 0, 32)
+keyInput.Position = UDim2.new(0, 10, 0, 65)
 keyInput.PlaceholderText = "Enter access key..."
 keyInput.Text = ""
 keyInput.BackgroundColor3 = Color3.fromRGB(40, 40, 60)
 keyInput.BackgroundTransparency = 0.2
 keyInput.TextColor3 = Color3.fromRGB(255, 255, 255)
 keyInput.Font = Enum.Font.Gotham
-keyInput.TextSize = 13
+keyInput.TextSize = 12
 keyInput.Parent = keyFrame
 
 local keyInputCorner = Instance.new("UICorner")
@@ -155,14 +155,14 @@ keyInputCorner.Parent = keyInput
 
 -- Activate Button
 local activateBtn = Instance.new("TextButton")
-activateBtn.Size = UDim2.new(1, -20, 0, 35)
-activateBtn.Position = UDim2.new(0, 10, 0, 115)
+activateBtn.Size = UDim2.new(1, -20, 0, 32)
+activateBtn.Position = UDim2.new(0, 10, 0, 105)
 activateBtn.BackgroundColor3 = Color3.fromRGB(0, 150, 255)
 activateBtn.BackgroundTransparency = 0.2
 activateBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
 activateBtn.Text = " ACTIVATE"
 activateBtn.Font = Enum.Font.GothamBold
-activateBtn.TextSize = 13
+activateBtn.TextSize = 12
 activateBtn.Parent = keyFrame
 
 local activateCorner = Instance.new("UICorner")
@@ -197,9 +197,9 @@ activateBtn.MouseButton1Click:Connect(function()
         
         local startPos = keyInput.Position
         for i = 1, 2 do
-            keyInput.Position = UDim2.new(0, 15, 0, 70)
+            keyInput.Position = UDim2.new(0, 15, 0, 65)
             task.wait(0.03)
-            keyInput.Position = UDim2.new(0, 5, 0, 70)
+            keyInput.Position = UDim2.new(0, 5, 0, 65)
             task.wait(0.03)
         end
         keyInput.Position = startPos
@@ -208,10 +208,10 @@ end)
 
 -- Main Spammer GUI Function
 function loadSpammerGUI()
-    -- Main Frame - Clean Compact Size
+    -- 🔥 MOBILE COMPACT MAIN FRAME 🔥
     local mainFrame = Instance.new("Frame")
-    mainFrame.Size = UDim2.new(0, 320, 0, 450)
-    mainFrame.Position = UDim2.new(0.5, -160, 0.5, -225)
+    mainFrame.Size = UDim2.new(0, 280, 0, 380) -- More compact for mobile
+    mainFrame.Position = UDim2.new(0.5, -140, 0.5, -190)
     mainFrame.AnchorPoint = Vector2.new(0.5, 0.5)
     mainFrame.BackgroundColor3 = Color3.fromRGB(15, 15, 25)
     mainFrame.BackgroundTransparency = 0.1
@@ -222,9 +222,9 @@ function loadSpammerGUI()
     corner.CornerRadius = UDim.new(0, 10)
     corner.Parent = mainFrame
 
-    -- Title Bar - YAHAN SE PAKAD KAR MOVE KAR SAKTE HO (MOBILE + PC)
+    -- Title Bar - Compact
     local titleBar = Instance.new("Frame")
-    titleBar.Size = UDim2.new(1, 0, 0, 30)
+    titleBar.Size = UDim2.new(1, 0, 0, 28)
     titleBar.Position = UDim2.new(0, 0, 0, 0)
     titleBar.BackgroundColor3 = Color3.fromRGB(25, 25, 40)
     titleBar.BackgroundTransparency = 0.2
@@ -234,15 +234,15 @@ function loadSpammerGUI()
     titleCorner.CornerRadius = UDim.new(0, 10)
     titleCorner.Parent = titleBar
 
-    -- Rainbow Title
+    -- Rainbow Title - Smaller
     local title = Instance.new("TextLabel")
-    title.Size = UDim2.new(0.5, 0, 1, 0)
-    title.Position = UDim2.new(0, 8, 0, 0)
+    title.Size = UDim2.new(0.6, 0, 1, 0)
+    title.Position = UDim2.new(0, 6, 0, 0)
     title.BackgroundTransparency = 1
     title.TextColor3 = Color3.fromRGB(255, 0, 0)
-    title.Text = " CHADDI GANG SPAMMER"
+    title.Text = " CHADDI GANG"
     title.Font = Enum.Font.GothamBold
-    title.TextSize = 12
+    title.TextSize = 11
     title.TextXAlignment = Enum.TextXAlignment.Left
     title.Parent = titleBar
 
@@ -274,135 +274,135 @@ function loadSpammerGUI()
         end
     end)()
 
-    -- Control Buttons Container
+    -- Control Buttons Container - Smaller
     local controlButtons = Instance.new("Frame")
-    controlButtons.Size = UDim2.new(0, 60, 1, 0)
-    controlButtons.Position = UDim2.new(1, -65, 0, 0)
+    controlButtons.Size = UDim2.new(0, 50, 1, 0)
+    controlButtons.Position = UDim2.new(1, -55, 0, 0)
     controlButtons.BackgroundTransparency = 1
     controlButtons.Parent = titleBar
 
     local controlLayout = Instance.new("UIListLayout")
     controlLayout.FillDirection = Enum.FillDirection.Horizontal
-    controlLayout.Padding = UDim.new(0, 5)
+    controlLayout.Padding = UDim.new(0, 4)
     controlLayout.Parent = controlButtons
 
-    -- Minimize Button
+    -- Minimize Button - Smaller
     local minimizeBtn = Instance.new("TextButton")
-    minimizeBtn.Size = UDim2.new(0, 22, 0, 22)
+    minimizeBtn.Size = UDim2.new(0, 20, 0, 20)
     minimizeBtn.BackgroundColor3 = Color3.fromRGB(255, 193, 7)
     minimizeBtn.BackgroundTransparency = 0.2
     minimizeBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
     minimizeBtn.Text = "_"
     minimizeBtn.Font = Enum.Font.GothamBold
-    minimizeBtn.TextSize = 14
+    minimizeBtn.TextSize = 12
     minimizeBtn.Parent = controlButtons
 
     local minimizeCorner = Instance.new("UICorner")
-    minimizeCorner.CornerRadius = UDim.new(0, 5)
+    minimizeCorner.CornerRadius = UDim.new(0, 4)
     minimizeCorner.Parent = minimizeBtn
 
-    -- Close Button
+    -- Close Button - Smaller
     local closeBtn = Instance.new("TextButton")
-    closeBtn.Size = UDim2.new(0, 22, 0, 22)
+    closeBtn.Size = UDim2.new(0, 20, 0, 20)
     closeBtn.BackgroundColor3 = Color3.fromRGB(255, 50, 50)
     closeBtn.BackgroundTransparency = 0.2
     closeBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
     closeBtn.Text = "×"
     closeBtn.Font = Enum.Font.GothamBold
-    closeBtn.TextSize = 14
+    closeBtn.TextSize = 12
     closeBtn.Parent = controlButtons
 
     local closeCorner = Instance.new("UICorner")
-    closeCorner.CornerRadius = UDim.new(0, 5)
+    closeCorner.CornerRadius = UDim.new(0, 4)
     closeCorner.Parent = closeBtn
 
-    -- Content Frame
+    -- Content Frame - Compact
     local contentFrame = Instance.new("Frame")
-    contentFrame.Size = UDim2.new(1, -10, 1, -35)
-    contentFrame.Position = UDim2.new(0, 5, 0, 35)
+    contentFrame.Size = UDim2.new(1, -8, 1, -32)
+    contentFrame.Position = UDim2.new(0, 4, 0, 32)
     contentFrame.BackgroundTransparency = 1
     contentFrame.Parent = mainFrame
 
     local uiList = Instance.new("UIListLayout")
-    uiList.Padding = UDim.new(0, 6)
+    uiList.Padding = UDim.new(0, 4) -- Reduced padding
     uiList.Parent = contentFrame
 
-    -- Mode Selection - CLEANER DESIGN
+    -- Mode Selection - Compact
     local modeContainer = Instance.new("Frame")
-    modeContainer.Size = UDim2.new(1, 0, 0, 25)
+    modeContainer.Size = UDim2.new(1, 0, 0, 22) -- Smaller
     modeContainer.BackgroundTransparency = 1
     modeContainer.Parent = contentFrame
 
     local modeLayout = Instance.new("UIListLayout")
     modeLayout.FillDirection = Enum.FillDirection.Horizontal
-    modeLayout.Padding = UDim.new(0, 4)
+    modeLayout.Padding = UDim.new(0, 3) -- Reduced padding
     modeLayout.Parent = modeContainer
 
-    -- Single Message Mode
+    -- Single Message Mode - Smaller
     local singleModeBtn = Instance.new("TextButton")
-    singleModeBtn.Size = UDim2.new(0.33, -3, 1, 0)
+    singleModeBtn.Size = UDim2.new(0.33, -2, 1, 0)
     singleModeBtn.BackgroundColor3 = Color3.fromRGB(0, 150, 255)
     singleModeBtn.BackgroundTransparency = 0.2
     singleModeBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
-    singleModeBtn.Text = " SINGLE"
+    singleModeBtn.Text = "SINGLE"
     singleModeBtn.Font = Enum.Font.GothamBold
-    singleModeBtn.TextSize = 10
+    singleModeBtn.TextSize = 9
     singleModeBtn.Parent = modeContainer
 
     local singleCorner = Instance.new("UICorner")
-    singleCorner.CornerRadius = UDim.new(0, 5)
+    singleCorner.CornerRadius = UDim.new(0, 4)
     singleCorner.Parent = singleModeBtn
 
-    -- Multi Message Mode
+    -- Multi Message Mode - Smaller
     local multiModeBtn = Instance.new("TextButton")
-    multiModeBtn.Size = UDim2.new(0.33, -3, 1, 0)
+    multiModeBtn.Size = UDim2.new(0.33, -2, 1, 0)
     multiModeBtn.BackgroundColor3 = Color3.fromRGB(40, 40, 60)
     multiModeBtn.BackgroundTransparency = 0.3
     multiModeBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
-    multiModeBtn.Text = " MULTI"
+    multiModeBtn.Text = "MULTI"
     multiModeBtn.Font = Enum.Font.GothamBold
-    multiModeBtn.TextSize = 10
+    multiModeBtn.TextSize = 9
     multiModeBtn.Parent = modeContainer
 
     local multiCorner = Instance.new("UICorner")
-    multiCorner.CornerRadius = UDim.new(0, 5)
+    multiCorner.CornerRadius = UDim.new(0, 4)
     multiCorner.Parent = multiModeBtn
 
-    -- TMKX Mode
+    -- TMKX Mode - Smaller
     local tmkxModeBtn = Instance.new("TextButton")
-    tmkxModeBtn.Size = UDim2.new(0.34, -3, 1, 0)
+    tmkxModeBtn.Size = UDim2.new(0.34, -2, 1, 0)
     tmkxModeBtn.BackgroundColor3 = Color3.fromRGB(40, 40, 60)
     tmkxModeBtn.BackgroundTransparency = 0.3
     tmkxModeBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
-    tmkxModeBtn.Text = " TMKX"
+    tmkxModeBtn.Text = "TMKX"
     tmkxModeBtn.Font = Enum.Font.GothamBold
-    tmkxModeBtn.TextSize = 10
+    tmkxModeBtn.TextSize = 9
     tmkxModeBtn.Parent = modeContainer
 
     local tmkxCorner = Instance.new("UICorner")
-    tmkxCorner.CornerRadius = UDim.new(0, 5)
+    tmkxCorner.CornerRadius = UDim.new(0, 4)
     tmkxCorner.Parent = tmkxModeBtn
 
-    -- Single Message Input
+    -- Single Message Input - Smaller
     local singleMessageBox = Instance.new("TextBox")
-    singleMessageBox.Size = UDim2.new(1, 0, 0, 32)
+    singleMessageBox.Size = UDim2.new(1, 0, 0, 28)
     singleMessageBox.PlaceholderText = "Single message..."
     singleMessageBox.Text = ""
     singleMessageBox.BackgroundColor3 = Color3.fromRGB(30, 30, 45)
     singleMessageBox.BackgroundTransparency = 0.2
     singleMessageBox.TextColor3 = Color3.fromRGB(255, 255, 255)
     singleMessageBox.Font = Enum.Font.Gotham
-    singleMessageBox.TextSize = 12
+    singleMessageBox.TextSize = 11
     singleMessageBox.Visible = true
     singleMessageBox.Parent = contentFrame
 
     local singleMsgCorner = Instance.new("UICorner")
-    singleMsgCorner.CornerRadius = UDim.new(0, 5)
+    singleMsgCorner.CornerRadius = UDim.new(0, 4)
     singleMsgCorner.Parent = singleMessageBox
 
-    -- Multi Message Input
+    -- Multi Message Input - Smaller
     local multiMessageBox = Instance.new("TextBox")
-    multiMessageBox.Size = UDim2.new(1, 0, 0, 80)
+    multiMessageBox.Size = UDim2.new(1, 0, 0, 60) -- Smaller
     multiMessageBox.PlaceholderText = "Multiple messages...\n(one per line)"
     multiMessageBox.Text = ""
     multiMessageBox.MultiLine = true
@@ -414,101 +414,101 @@ function loadSpammerGUI()
     multiMessageBox.BackgroundTransparency = 0.2
     multiMessageBox.TextColor3 = Color3.fromRGB(255, 255, 255)
     multiMessageBox.Font = Enum.Font.Gotham
-    multiMessageBox.TextSize = 12
+    multiMessageBox.TextSize = 10
     multiMessageBox.Visible = false
     multiMessageBox.Parent = contentFrame
 
     local multiMsgCorner = Instance.new("UICorner")
-    multiMsgCorner.CornerRadius = UDim.new(0, 5)
+    multiMsgCorner.CornerRadius = UDim.new(0, 4)
     multiMsgCorner.Parent = multiMessageBox
 
-    -- 🔥 TMKX CUSTOM TEXT BOX - "H8TER" REPLACEMENT 🔥
+    -- 🔥 TMKX CUSTOM TEXT BOX - Compact 🔥
     local tmkxCustomTextContainer = Instance.new("Frame")
-    tmkxCustomTextContainer.Size = UDim2.new(1, 0, 0, 32)
+    tmkxCustomTextContainer.Size = UDim2.new(1, 0, 0, 28)
     tmkxCustomTextContainer.BackgroundTransparency = 1
     tmkxCustomTextContainer.Visible = false
     tmkxCustomTextContainer.Parent = contentFrame
 
     local tmkxCustomTextLayout = Instance.new("UIListLayout")
     tmkxCustomTextLayout.FillDirection = Enum.FillDirection.Horizontal
-    tmkxCustomTextLayout.Padding = UDim.new(0, 6)
+    tmkxCustomTextLayout.Padding = UDim.new(0, 4)
     tmkxCustomTextLayout.Parent = tmkxCustomTextContainer
 
-    -- Custom Text Label
+    -- Custom Text Label - Smaller
     local tmkxCustomLabel = Instance.new("TextLabel")
-    tmkxCustomLabel.Size = UDim2.new(0.4, 0, 1, 0)
+    tmkxCustomLabel.Size = UDim2.new(0.45, 0, 1, 0)
     tmkxCustomLabel.BackgroundTransparency = 1
     tmkxCustomLabel.TextColor3 = Color3.fromRGB(200, 200, 255)
-    tmkxCustomLabel.Text = " Replace 'H8TER':"
+    tmkxCustomLabel.Text = "Replace 'H8TER':"
     tmkxCustomLabel.Font = Enum.Font.Gotham
-    tmkxCustomLabel.TextSize = 11
+    tmkxCustomLabel.TextSize = 10
     tmkxCustomLabel.TextXAlignment = Enum.TextXAlignment.Left
     tmkxCustomLabel.Parent = tmkxCustomTextContainer
 
-    -- Custom Text Input
+    -- Custom Text Input - Smaller
     local tmkxCustomTextBox = Instance.new("TextBox")
-    tmkxCustomTextBox.Size = UDim2.new(0.6, 0, 1, 0)
+    tmkxCustomTextBox.Size = UDim2.new(0.55, 0, 1, 0)
     tmkxCustomTextBox.PlaceholderText = "H8TER"
     tmkxCustomTextBox.Text = "H8TER"
     tmkxCustomTextBox.BackgroundColor3 = Color3.fromRGB(40, 40, 60)
     tmkxCustomTextBox.BackgroundTransparency = 0.2
     tmkxCustomTextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
     tmkxCustomTextBox.Font = Enum.Font.Gotham
-    tmkxCustomTextBox.TextSize = 11
+    tmkxCustomTextBox.TextSize = 10
     tmkxCustomTextBox.Parent = tmkxCustomTextContainer
 
     local tmkxCustomCorner = Instance.new("UICorner")
-    tmkxCustomCorner.CornerRadius = UDim.new(0, 5)
+    tmkxCustomCorner.CornerRadius = UDim.new(0, 4)
     tmkxCustomCorner.Parent = tmkxCustomTextBox
 
-    -- TMKX Info Panel
+    -- TMKX Info Panel - Smaller
     local tmkxInfoPanel = Instance.new("Frame")
-    tmkxInfoPanel.Size = UDim2.new(1, 0, 0, 60)
+    tmkxInfoPanel.Size = UDim2.new(1, 0, 0, 50)
     tmkxInfoPanel.BackgroundColor3 = Color3.fromRGB(25, 25, 35)
     tmkxInfoPanel.BackgroundTransparency = 0.2
     tmkxInfoPanel.Visible = false
     tmkxInfoPanel.Parent = contentFrame
 
     local tmkxInfoCorner = Instance.new("UICorner")
-    tmkxInfoCorner.CornerRadius = UDim.new(0, 5)
+    tmkxInfoCorner.CornerRadius = UDim.new(0, 4)
     tmkxInfoCorner.Parent = tmkxInfoPanel
 
     local tmkxInfoLabel = Instance.new("TextLabel")
-    tmkxInfoLabel.Size = UDim2.new(1, -10, 1, -10)
-    tmkxInfoLabel.Position = UDim2.new(0, 5, 0, 5)
+    tmkxInfoLabel.Size = UDim2.new(1, -8, 1, -8)
+    tmkxInfoLabel.Position = UDim2.new(0, 4, 0, 4)
     tmkxInfoLabel.BackgroundTransparency = 1
     tmkxInfoLabel.TextColor3 = Color3.fromRGB(200, 200, 255)
-    tmkxInfoLabel.Text = " TMKX SPAM READY\n64 pre-loaded messages\nCustom text enabled"
+    tmkxInfoLabel.Text = "TMKX SPAM READY\n32 messages\nCustom text enabled"
     tmkxInfoLabel.Font = Enum.Font.Gotham
-    tmkxInfoLabel.TextSize = 11
+    tmkxInfoLabel.TextSize = 10
     tmkxInfoLabel.TextWrapped = true
     tmkxInfoLabel.TextYAlignment = Enum.TextYAlignment.Top
     tmkxInfoLabel.Parent = tmkxInfoPanel
 
-    -- Delay Settings Container
+    -- Delay Settings Container - Smaller
     local delayContainer = Instance.new("Frame")
-    delayContainer.Size = UDim2.new(1, 0, 0, 25)
+    delayContainer.Size = UDim2.new(1, 0, 0, 22)
     delayContainer.BackgroundTransparency = 1
     delayContainer.Visible = false
     delayContainer.Parent = contentFrame
 
     local delayLayout = Instance.new("UIListLayout")
     delayLayout.FillDirection = Enum.FillDirection.Horizontal
-    delayLayout.Padding = UDim.new(0, 8)
+    delayLayout.Padding = UDim.new(0, 6)
     delayLayout.Parent = delayContainer
 
-    -- Delay Label
+    -- Delay Label - Smaller
     local delayLabel = Instance.new("TextLabel")
     delayLabel.Size = UDim2.new(0.4, 0, 1, 0)
     delayLabel.BackgroundTransparency = 1
     delayLabel.TextColor3 = Color3.fromRGB(200, 200, 255)
-    delayLabel.Text = " Delay:"
+    delayLabel.Text = "Delay:"
     delayLabel.Font = Enum.Font.Gotham
-    delayLabel.TextSize = 11
+    delayLabel.TextSize = 10
     delayLabel.TextXAlignment = Enum.TextXAlignment.Left
     delayLabel.Parent = delayContainer
 
-    -- Delay Input
+    -- Delay Input - Smaller
     local delayInput = Instance.new("TextBox")
     delayInput.Size = UDim2.new(0.3, 0, 1, 0)
     delayInput.PlaceholderText = "30"
@@ -517,181 +517,176 @@ function loadSpammerGUI()
     delayInput.BackgroundTransparency = 0.2
     delayInput.TextColor3 = Color3.fromRGB(255, 255, 255)
     delayInput.Font = Enum.Font.Gotham
-    delayInput.TextSize = 11
+    delayInput.TextSize = 10
     delayInput.Parent = delayContainer
 
     local delayInputCorner = Instance.new("UICorner")
-    delayInputCorner.CornerRadius = UDim.new(0, 4)
+    delayInputCorner.CornerRadius = UDim.new(0, 3)
     delayInputCorner.Parent = delayInput
 
-    -- Delay Info
+    -- Delay Info - Smaller
     local delayInfo = Instance.new("TextLabel")
     delayInfo.Size = UDim2.new(0.3, 0, 1, 0)
     delayInfo.BackgroundTransparency = 1
     delayInfo.TextColor3 = Color3.fromRGB(100, 255, 100)
-    delayInfo.Text = " Auto"
+    delayInfo.Text = "Auto"
     delayInfo.Font = Enum.Font.Gotham
-    delayInfo.TextSize = 10
+    delayInfo.TextSize = 9
     delayInfo.TextXAlignment = Enum.TextXAlignment.Right
     delayInfo.Parent = delayContainer
 
-    -- Button Container for Single Mode
+    -- Button Container for Single Mode - Smaller
     local singleButtonContainer = Instance.new("Frame")
-    singleButtonContainer.Size = UDim2.new(1, 0, 0, 35)
+    singleButtonContainer.Size = UDim2.new(1, 0, 0, 30)
     singleButtonContainer.BackgroundTransparency = 1
     singleButtonContainer.Visible = true
     singleButtonContainer.Parent = contentFrame
 
-    local singleButtonLayout = Instance.new("UIListLayout")
-    singleButtonLayout.FillDirection = Enum.FillDirection.Horizontal
-    singleButtonLayout.Padding = UDim.new(0, 6)
-    singleButtonLayout.Parent = singleButtonContainer
-
-    -- Send Once Button (Single Mode)
+    -- Send Once Button (Single Mode) - Smaller
     local sendBtn = Instance.new("TextButton")
     sendBtn.Size = UDim2.new(1, 0, 1, 0)
     sendBtn.BackgroundColor3 = Color3.fromRGB(0, 150, 255)
     sendBtn.BackgroundTransparency = 0.2
     sendBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
-    sendBtn.Text = " SEND ONCE"
+    sendBtn.Text = "SEND ONCE"
     sendBtn.Font = Enum.Font.GothamBold
-    sendBtn.TextSize = 12
+    sendBtn.TextSize = 11
     sendBtn.Parent = singleButtonContainer
 
     local sendCorner = Instance.new("UICorner")
-    sendCorner.CornerRadius = UDim.new(0, 5)
+    sendCorner.CornerRadius = UDim.new(0, 4)
     sendCorner.Parent = sendBtn
 
-    -- Button Container for Multi Mode
+    -- Button Container for Multi Mode - Smaller
     local multiButtonContainer = Instance.new("Frame")
-    multiButtonContainer.Size = UDim2.new(1, 0, 0, 35)
+    multiButtonContainer.Size = UDim2.new(1, 0, 0, 30)
     multiButtonContainer.BackgroundTransparency = 1
     multiButtonContainer.Visible = false
     multiButtonContainer.Parent = contentFrame
 
     local multiButtonLayout = Instance.new("UIListLayout")
     multiButtonLayout.FillDirection = Enum.FillDirection.Horizontal
-    multiButtonLayout.Padding = UDim.new(0, 6)
+    multiButtonLayout.Padding = UDim.new(0, 4)
     multiButtonLayout.Parent = multiButtonContainer
 
-    -- Send All Button (Multi Mode)
+    -- Send All Button (Multi Mode) - Smaller
     local sendAllBtn = Instance.new("TextButton")
-    sendAllBtn.Size = UDim2.new(0.5, -3, 1, 0)
+    sendAllBtn.Size = UDim2.new(0.5, -2, 1, 0)
     sendAllBtn.BackgroundColor3 = Color3.fromRGB(0, 200, 100)
     sendAllBtn.BackgroundTransparency = 0.2
     sendAllBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
-    sendAllBtn.Text = " SEND ALL"
+    sendAllBtn.Text = "SEND ALL"
     sendAllBtn.Font = Enum.Font.GothamBold
-    sendAllBtn.TextSize = 11
+    sendAllBtn.TextSize = 10
     sendAllBtn.Parent = multiButtonContainer
 
     local sendAllCorner = Instance.new("UICorner")
-    sendAllCorner.CornerRadius = UDim.new(0, 5)
+    sendAllCorner.CornerRadius = UDim.new(0, 4)
     sendAllCorner.Parent = sendAllBtn
 
-    -- Auto Repeat Button (Multi Mode)
+    -- Auto Repeat Button (Multi Mode) - Smaller
     local autoRepeatBtn = Instance.new("TextButton")
-    autoRepeatBtn.Size = UDim2.new(0.5, -3, 1, 0)
+    autoRepeatBtn.Size = UDim2.new(0.5, -2, 1, 0)
     autoRepeatBtn.BackgroundColor3 = Color3.fromRGB(255, 165, 0)
     autoRepeatBtn.BackgroundTransparency = 0.2
     autoRepeatBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
-    autoRepeatBtn.Text = " AUTO REPEAT"
+    autoRepeatBtn.Text = "AUTO REPEAT"
     autoRepeatBtn.Font = Enum.Font.GothamBold
-    autoRepeatBtn.TextSize = 11
+    autoRepeatBtn.TextSize = 10
     autoRepeatBtn.Parent = multiButtonContainer
 
     local autoRepeatCorner = Instance.new("UICorner")
-    autoRepeatCorner.CornerRadius = UDim.new(0, 5)
+    autoRepeatCorner.CornerRadius = UDim.new(0, 4)
     autoRepeatCorner.Parent = autoRepeatBtn
 
-    -- Button Container for TMKX Mode
+    -- Button Container for TMKX Mode - Smaller
     local tmkxButtonContainer = Instance.new("Frame")
-    tmkxButtonContainer.Size = UDim2.new(1, 0, 0, 35)
+    tmkxButtonContainer.Size = UDim2.new(1, 0, 0, 30)
     tmkxButtonContainer.BackgroundTransparency = 1
     tmkxButtonContainer.Visible = false
     tmkxButtonContainer.Parent = contentFrame
 
     local tmkxButtonLayout = Instance.new("UIListLayout")
     tmkxButtonLayout.FillDirection = Enum.FillDirection.Horizontal
-    tmkxButtonLayout.Padding = UDim.new(0, 6)
+    tmkxButtonLayout.Padding = UDim.new(0, 4)
     tmkxButtonLayout.Parent = tmkxButtonContainer
 
-    -- TMKX Send All Button
+    -- TMKX Send All Button - Smaller
     local tmkxSendAllBtn = Instance.new("TextButton")
-    tmkxSendAllBtn.Size = UDim2.new(0.5, -3, 1, 0)
+    tmkxSendAllBtn.Size = UDim2.new(0.5, -2, 1, 0)
     tmkxSendAllBtn.BackgroundColor3 = Color3.fromRGB(148, 0, 211)
     tmkxSendAllBtn.BackgroundTransparency = 0.2
     tmkxSendAllBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
-    tmkxSendAllBtn.Text = " SEND TMKX"
+    tmkxSendAllBtn.Text = "SEND TMKX"
     tmkxSendAllBtn.Font = Enum.Font.GothamBold
-    tmkxSendAllBtn.TextSize = 11
+    tmkxSendAllBtn.TextSize = 10
     tmkxSendAllBtn.Parent = tmkxButtonContainer
 
     local tmkxSendAllCorner = Instance.new("UICorner")
-    tmkxSendAllCorner.CornerRadius = UDim.new(0, 5)
+    tmkxSendAllCorner.CornerRadius = UDim.new(0, 4)
     tmkxSendAllCorner.Parent = tmkxSendAllBtn
 
-    -- TMKX Auto Repeat Button
+    -- TMKX Auto Repeat Button - Smaller
     local tmkxAutoRepeatBtn = Instance.new("TextButton")
-    tmkxAutoRepeatBtn.Size = UDim2.new(0.5, -3, 1, 0)
+    tmkxAutoRepeatBtn.Size = UDim2.new(0.5, -2, 1, 0)
     tmkxAutoRepeatBtn.BackgroundColor3 = Color3.fromRGB(255, 105, 180)
     tmkxAutoRepeatBtn.BackgroundTransparency = 0.2
     tmkxAutoRepeatBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
-    tmkxAutoRepeatBtn.Text = " TMKX REPEAT"
+    tmkxAutoRepeatBtn.Text = "TMKX REPEAT"
     tmkxAutoRepeatBtn.Font = Enum.Font.GothamBold
-    tmkxAutoRepeatBtn.TextSize = 11
+    tmkxAutoRepeatBtn.TextSize = 10
     tmkxAutoRepeatBtn.Parent = tmkxButtonContainer
 
     local tmkxAutoRepeatCorner = Instance.new("UICorner")
-    tmkxAutoRepeatCorner.CornerRadius = UDim.new(0, 5)
+    tmkxAutoRepeatCorner.CornerRadius = UDim.new(0, 4)
     tmkxAutoRepeatCorner.Parent = tmkxAutoRepeatBtn
 
-    -- Status Label
+    -- Status Label - Smaller
     local statusLabel = Instance.new("TextLabel")
-    statusLabel.Size = UDim2.new(1, 0, 0, 50)
+    statusLabel.Size = UDim2.new(1, 0, 0, 40)
     statusLabel.BackgroundTransparency = 1
     statusLabel.TextColor3 = Color3.fromRGB(0, 255, 255)
-    statusLabel.Text = " READY\nSelect mode to send messages"
+    statusLabel.Text = "✅ READY\nSelect mode to send messages"
     statusLabel.Font = Enum.Font.Gotham
-    statusLabel.TextSize = 11
+    statusLabel.TextSize = 10
     statusLabel.TextWrapped = true
     statusLabel.Parent = contentFrame
 
-    -- 🔥 DRAG SETTINGS SECTION 🔥
+    -- 🔥 DRAG SETTINGS SECTION - Compact 🔥
     local dragSettingsContainer = Instance.new("Frame")
-    dragSettingsContainer.Size = UDim2.new(1, 0, 0, 25)
+    dragSettingsContainer.Size = UDim2.new(1, 0, 0, 22)
     dragSettingsContainer.BackgroundTransparency = 1
     dragSettingsContainer.Parent = contentFrame
 
     local dragSettingsLayout = Instance.new("UIListLayout")
     dragSettingsLayout.FillDirection = Enum.FillDirection.Horizontal
-    dragSettingsLayout.Padding = UDim.new(0, 8)
+    dragSettingsLayout.Padding = UDim.new(0, 6)
     dragSettingsLayout.Parent = dragSettingsContainer
 
-    -- Drag Mode Label
+    -- Drag Mode Label - Smaller
     local dragModeLabel = Instance.new("TextLabel")
     dragModeLabel.Size = UDim2.new(0.4, 0, 1, 0)
     dragModeLabel.BackgroundTransparency = 1
     dragModeLabel.TextColor3 = Color3.fromRGB(200, 200, 255)
-    dragModeLabel.Text = " Drag Mode:"
+    dragModeLabel.Text = "Drag Mode:"
     dragModeLabel.Font = Enum.Font.Gotham
-    dragModeLabel.TextSize = 11
+    dragModeLabel.TextSize = 10
     dragModeLabel.TextXAlignment = Enum.TextXAlignment.Left
     dragModeLabel.Parent = dragSettingsContainer
 
-    -- Drag Mode Toggle Button
+    -- Drag Mode Toggle Button - Smaller
     local dragModeToggle = Instance.new("TextButton")
     dragModeToggle.Size = UDim2.new(0.6, 0, 1, 0)
     dragModeToggle.BackgroundColor3 = Color3.fromRGB(0, 150, 255)
     dragModeToggle.BackgroundTransparency = 0.2
     dragModeToggle.TextColor3 = Color3.fromRGB(255, 255, 255)
-    dragModeToggle.Text = " TITLE BAR ONLY"
+    dragModeToggle.Text = "TITLE BAR ONLY"
     dragModeToggle.Font = Enum.Font.GothamBold
-    dragModeToggle.TextSize = 10
+    dragModeToggle.TextSize = 9
     dragModeToggle.Parent = dragSettingsContainer
 
     local dragToggleCorner = Instance.new("UICorner")
-    dragToggleCorner.CornerRadius = UDim.new(0, 5)
+    dragToggleCorner.CornerRadius = UDim.new(0, 4)
     dragToggleCorner.Parent = dragModeToggle
 
     -- Variables
@@ -719,7 +714,7 @@ function loadSpammerGUI()
         return customMessages
     end
 
-    -- 🔥 UNIFIED DRAG SYSTEM - POORI GUI EK SATH MOVE HOGA 🔥
+    -- 🔥 COMPACT DRAG SYSTEM 🔥
     local dragging = false
     local dragInput, dragStart, startPos
 
@@ -748,8 +743,8 @@ function loadSpammerGUI()
                     -- Mobile touch feedback
                     if input.UserInputType == Enum.UserInputType.Touch then
                         local touchFeedback = Instance.new("Frame")
-                        touchFeedback.Size = UDim2.new(0, 50, 0, 50)
-                        touchFeedback.Position = UDim2.new(0, input.Position.X - mainFrame.AbsolutePosition.X - 25, 0, input.Position.Y - mainFrame.AbsolutePosition.Y - 25)
+                        touchFeedback.Size = UDim2.new(0, 40, 0, 40)
+                        touchFeedback.Position = UDim2.new(0, input.Position.X - mainFrame.AbsolutePosition.X - 20, 0, input.Position.Y - mainFrame.AbsolutePosition.Y - 20)
                         touchFeedback.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
                         touchFeedback.BackgroundTransparency = 0.7
                         touchFeedback.BorderSizePixel = 0
@@ -815,12 +810,12 @@ function loadSpammerGUI()
         
         if dragFromAnywhere then
             dragModeToggle.BackgroundColor3 = Color3.fromRGB(0, 200, 100)
-            dragModeToggle.Text = " ANYWHERE DRAG"
-            statusLabel.Text = " ANYWHERE DRAG ENABLED\nKahi se bhi pakad kar move kar sakte ho!"
+            dragModeToggle.Text = "ANYWHERE DRAG"
+            statusLabel.Text = "✅ ANYWHERE DRAG ENABLED\nKahi se bhi pakad kar move kar sakte ho!"
         else
             dragModeToggle.BackgroundColor3 = Color3.fromRGB(0, 150, 255)
-            dragModeToggle.Text = " TITLE BAR ONLY"
-            statusLabel.Text = " TITLE BAR DRAG ONLY\nSirf title bar se move kar sakte ho!"
+            dragModeToggle.Text = "TITLE BAR ONLY"
+            statusLabel.Text = "✅ TITLE BAR DRAG ONLY\nSirf title bar se move kar sakte ho!"
         end
     end)
 
@@ -828,13 +823,13 @@ function loadSpammerGUI()
     minimizeBtn.MouseButton1Click:Connect(function()
         if isMinimized then
             -- Restore
-            mainFrame.Size = UDim2.new(0, 320, 0, 450)
+            mainFrame.Size = UDim2.new(0, 280, 0, 380)
             contentFrame.Visible = true
             minimizeBtn.Text = "_"
             isMinimized = false
         else
             -- Minimize
-            mainFrame.Size = UDim2.new(0, 320, 0, 30)
+            mainFrame.Size = UDim2.new(0, 280, 0, 28)
             contentFrame.Visible = false
             minimizeBtn.Text = "□"
             isMinimized = true
@@ -899,7 +894,7 @@ function loadSpammerGUI()
         multiModeBtn.BackgroundColor3 = Color3.fromRGB(40, 40, 60)
         tmkxModeBtn.BackgroundColor3 = Color3.fromRGB(40, 40, 60)
         
-        statusLabel.Text = " SINGLE MODE\nEnter message & click SEND"
+        statusLabel.Text = "SINGLE MODE\nEnter message & click SEND"
         
         -- Stop auto repeat if active
         if autoRepeating then
@@ -909,9 +904,9 @@ function loadSpammerGUI()
                 autoRepeatConnection = nil
             end
             autoRepeatBtn.BackgroundColor3 = Color3.fromRGB(255, 165, 0)
-            autoRepeatBtn.Text = " AUTO REPEAT"
+            autoRepeatBtn.Text = "AUTO REPEAT"
             tmkxAutoRepeatBtn.BackgroundColor3 = Color3.fromRGB(255, 105, 180)
-            tmkxAutoRepeatBtn.Text = " TMKX REPEAT"
+            tmkxAutoRepeatBtn.Text = "TMKX REPEAT"
         end
     end)
 
@@ -930,7 +925,7 @@ function loadSpammerGUI()
         multiModeBtn.BackgroundColor3 = Color3.fromRGB(0, 150, 255)
         tmkxModeBtn.BackgroundColor3 = Color3.fromRGB(40, 40, 60)
         
-        statusLabel.Text = " MULTI MODE\nEnter messages & click SEND"
+        statusLabel.Text = "MULTI MODE\nEnter messages & click SEND"
     end)
 
     tmkxModeBtn.MouseButton1Click:Connect(function()
@@ -948,7 +943,7 @@ function loadSpammerGUI()
         multiModeBtn.BackgroundColor3 = Color3.fromRGB(40, 40, 60)
         tmkxModeBtn.BackgroundColor3 = Color3.fromRGB(148, 0, 211)
         
-        statusLabel.Text = " TMKX MODE\n64 pre-loaded messages ready\nCustomize 'H8TER' text above"
+        statusLabel.Text = "TMKX MODE\n32 messages ready\nCustomize 'H8TER' text"
     end)
 
     -- Send Once Function
@@ -965,262 +960,187 @@ function loadSpammerGUI()
             if success then
                 totalMessagesSent = totalMessagesSent + 1
                 statusLabel.TextColor3 = Color3.fromRGB(0, 255, 150)
-                statusLabel.Text = " MESSAGE SENT\nTotal: " .. totalMessagesSent
+                statusLabel.Text = "✅ MESSAGE SENT\nTotal: " .. totalMessagesSent
             else
                 statusLabel.TextColor3 = Color3.fromRGB(255, 100, 100)
-                statusLabel.Text = " FAILED TO SEND"
+                statusLabel.Text = "❌ FAILED TO SEND"
             end
         end
     end)
 
     -- Send All Function (Multi Mode)
     sendAllBtn.MouseButton1Click:Connect(function()
-        if currentMode ~= "multi" then
-            statusLabel.Text = " MULTI MODE ONLY"
-            return
-        end
+        if currentMode ~= "multi" then return end
         
         local multiText = multiMessageBox.Text
         if multiText == "" then
-            statusLabel.Text = " ENTER MESSAGES"
+            statusLabel.Text = "❌ ENTER MESSAGES"
             return
         end
         
         messagesList = processMultiMessages(multiText)
         if #messagesList == 0 then
-            statusLabel.Text = " NO MESSAGES"
+            statusLabel.Text = "❌ NO MESSAGES"
             return
         end
         
-        statusLabel.Text = " SENDING ALL MESSAGES..."
+        statusLabel.Text = "SENDING ALL MESSAGES..."
         
         local sentCount = 0
-        local failedCount = 0
-        
         for i, message in ipairs(messagesList) do
             local success = sendMessageUniversal(message)
-            
             if success then
                 sentCount = sentCount + 1
                 totalMessagesSent = totalMessagesSent + 1
-                statusLabel.Text = string.format(" SENT %d/%d", i, #messagesList)
+                statusLabel.Text = string.format("✅ SENT %d/%d", i, #messagesList)
             else
-                failedCount = failedCount + 1
-                statusLabel.Text = string.format(" FAILED %d/%d", i, #messagesList)
+                statusLabel.Text = string.format("❌ FAILED %d/%d", i, #messagesList)
             end
-            
             task.wait(0.3)
         end
         
         statusLabel.TextColor3 = Color3.fromRGB(0, 255, 150)
-        statusLabel.Text = string.format(" COMPLETED\nSent: %d | Failed: %d", sentCount, failedCount)
+        statusLabel.Text = string.format("✅ COMPLETED\nSent: %d/%d", sentCount, #messagesList)
     end)
 
     -- TMKX Send All Function
     tmkxSendAllBtn.MouseButton1Click:Connect(function()
-        if currentMode ~= "tmkx" then
-            statusLabel.Text = " TMKX MODE ONLY"
-            return
-        end
+        if currentMode ~= "tmkx" then return end
         
         local customTMKXMessages = getCustomTMKXMessages()
-        statusLabel.Text = " SENDING TMKX MESSAGES..."
+        statusLabel.Text = "SENDING TMKX MESSAGES..."
         
         local sentCount = 0
-        local failedCount = 0
-        
         for i, message in ipairs(customTMKXMessages) do
             local success = sendMessageUniversal(message)
-            
             if success then
                 sentCount = sentCount + 1
                 totalMessagesSent = totalMessagesSent + 1
-                statusLabel.Text = string.format(" TMKX %d/%d", i, #customTMKXMessages)
+                statusLabel.Text = string.format("TMKX %d/%d", i, #customTMKXMessages)
             else
-                failedCount = failedCount + 1
-                statusLabel.Text = string.format(" FAILED %d/%d", i, #customTMKXMessages)
+                statusLabel.Text = string.format("❌ FAILED %d/%d", i, #customTMKXMessages)
             end
-            
             task.wait(0.3)
         end
         
         statusLabel.TextColor3 = Color3.fromRGB(148, 0, 211)
-        statusLabel.Text = string.format(" TMKX COMPLETED\nSent: %d | Failed: %d", sentCount, failedCount)
+        statusLabel.Text = string.format("✅ TMKX COMPLETED\nSent: %d/%d", sentCount, #customTMKXMessages)
     end)
 
     -- Auto Repeat Function (Multi Mode)
     autoRepeatBtn.MouseButton1Click:Connect(function()
-        if currentMode ~= "multi" then
-            statusLabel.Text = " MULTI MODE ONLY"
-            return
-        end
+        if currentMode ~= "multi" then return end
         
         local multiText = multiMessageBox.Text
         if multiText == "" then
-            statusLabel.Text = " ENTER MESSAGES"
+            statusLabel.Text = "❌ ENTER MESSAGES"
             return
         end
         
         messagesList = processMultiMessages(multiText)
         if #messagesList == 0 then
-            statusLabel.Text = " NO MESSAGES"
+            statusLabel.Text = "❌ NO MESSAGES"
             return
         end
         
-        -- Get delay from input
         currentDelay = tonumber(delayInput.Text) or 30
-        if currentDelay < 3 then
-            currentDelay = 3
-            delayInput.Text = "3"
-        end
+        if currentDelay < 3 then currentDelay = 3 end
         
         if not autoRepeating then
-            -- Start Auto Repeat
             autoRepeating = true
             autoRepeatBtn.BackgroundColor3 = Color3.fromRGB(255, 50, 50)
-            autoRepeatBtn.Text = " STOP"
-            statusLabel.Text = string.format(" AUTO REPEAT STARTED\nDelay: %d seconds", currentDelay)
+            autoRepeatBtn.Text = "⏹️ STOP"
+            statusLabel.Text = string.format("🔁 AUTO REPEAT\nDelay: %d seconds", currentDelay)
             
             local currentIndex = 1
-            local lastSendTime = 0
-            
             autoRepeatConnection = RunService.Heartbeat:Connect(function()
                 if not autoRepeating then return end
+                local message = messagesList[currentIndex]
+                local success = sendMessageUniversal(message)
                 
-                local currentTime = os.time()
-                if currentTime - lastSendTime >= currentDelay then
-                    local message = messagesList[currentIndex]
-                    local success = sendMessageUniversal(message)
-                    
-                    if success then
-                        totalMessagesSent = totalMessagesSent + 1
-                        statusLabel.TextColor3 = Color3.fromRGB(0, 255, 150)
-                        statusLabel.Text = string.format(" %d/%d | Delay: %ds\nTotal: %d", currentIndex, #messagesList, currentDelay, totalMessagesSent)
-                    else
-                        statusLabel.TextColor3 = Color3.fromRGB(255, 100, 100)
-                        statusLabel.Text = string.format(" FAILED %d/%d", currentIndex, #messagesList)
-                    end
-                    
-                    -- Move to next message
-                    currentIndex = currentIndex + 1
-                    if currentIndex > #messagesList then
-                        currentIndex = 1
-                    end
-                    
-                    lastSendTime = currentTime
-                else
-                    -- Show countdown
-                    local remaining = currentDelay - (currentTime - lastSendTime)
-                    statusLabel.Text = string.format(" NEXT IN %ds | %d/%d", remaining, currentIndex, #messagesList)
+                if success then
+                    totalMessagesSent = totalMessagesSent + 1
+                    statusLabel.Text = string.format("🔁 %d/%d | %ds", currentIndex, #messagesList, currentDelay)
                 end
+                
+                currentIndex = currentIndex + 1
+                if currentIndex > #messagesList then currentIndex = 1 end
+                wait(currentDelay)
             end)
         else
-            -- Stop Auto Repeat
             autoRepeating = false
             if autoRepeatConnection then
                 autoRepeatConnection:Disconnect()
                 autoRepeatConnection = nil
             end
             autoRepeatBtn.BackgroundColor3 = Color3.fromRGB(255, 165, 0)
-            autoRepeatBtn.Text = " AUTO REPEAT"
-            statusLabel.Text = " AUTO REPEAT STOPPED"
+            autoRepeatBtn.Text = "AUTO REPEAT"
+            statusLabel.Text = "AUTO REPEAT STOPPED"
         end
     end)
 
     -- TMKX Auto Repeat Function
     tmkxAutoRepeatBtn.MouseButton1Click:Connect(function()
-        if currentMode ~= "tmkx" then
-            statusLabel.Text = "❌ TMKX MODE ONLY"
-            return
-        end
+        if currentMode ~= "tmkx" then return end
         
-        -- Get delay from input
         currentDelay = tonumber(delayInput.Text) or 30
-        if currentDelay < 2 then
-            currentDelay = 2
-            delayInput.Text = "2"
-        end
+        if currentDelay < 2 then currentDelay = 2 end
         
         if not autoRepeating then
-            -- Start TMKX Auto Repeat
             autoRepeating = true
             tmkxAutoRepeatBtn.BackgroundColor3 = Color3.fromRGB(255, 50, 50)
-            tmkxAutoRepeatBtn.Text = " STOP"
-            statusLabel.Text = string.format(" TMKX REPEAT STARTED\nDelay: %d seconds", currentDelay)
+            tmkxAutoRepeatBtn.Text = "STOP"
+            statusLabel.Text = string.format("🛍️ TMKX REPEAT\nDelay: %d seconds", currentDelay)
             
             local currentIndex = 1
-            local lastSendTime = 0
-            
             autoRepeatConnection = RunService.Heartbeat:Connect(function()
                 if not autoRepeating then return end
+                local customTMKXMessages = getCustomTMKXMessages()
+                local message = customTMKXMessages[currentIndex]
+                local success = sendMessageUniversal(message)
                 
-                local currentTime = os.time()
-                if currentTime - lastSendTime >= currentDelay then
-                    local customTMKXMessages = getCustomTMKXMessages()
-                    local message = customTMKXMessages[currentIndex]
-                    local success = sendMessageUniversal(message)
-                    
-                    if success then
-                        totalMessagesSent = totalMessagesSent + 1
-                        statusLabel.TextColor3 = Color3.fromRGB(148, 0, 211)
-                        statusLabel.Text = string.format(" TMKX %d/%d | Delay: %ds\nTotal: %d", currentIndex, #customTMKXMessages, currentDelay, totalMessagesSent)
-                    else
-                        statusLabel.TextColor3 = Color3.fromRGB(255, 100, 100)
-                        statusLabel.Text = string.format(" FAILED %d/%d", currentIndex, #customTMKXMessages)
-                    end
-                    
-                    -- Move to next message
-                    currentIndex = currentIndex + 1
-                    if currentIndex > #customTMKXMessages then
-                        currentIndex = 1
-                    end
-                    
-                    lastSendTime = currentTime
-                else
-                    -- Show countdown
-                    local remaining = currentDelay - (currentTime - lastSendTime)
-                    statusLabel.Text = string.format(" TMKX IN %ds | %d/%d", remaining, currentIndex, #customTMKXMessages)
+                if success then
+                    totalMessagesSent = totalMessagesSent + 1
+                    statusLabel.Text = string.format("🛍️ TMKX %d/%d | %ds", currentIndex, #customTMKXMessages, currentDelay)
                 end
+                
+                currentIndex = currentIndex + 1
+                if currentIndex > #customTMKXMessages then currentIndex = 1 end
+                wait(currentDelay)
             end)
         else
-            -- Stop TMKX Auto Repeat
             autoRepeating = false
             if autoRepeatConnection then
                 autoRepeatConnection:Disconnect()
                 autoRepeatConnection = nil
             end
             tmkxAutoRepeatBtn.BackgroundColor3 = Color3.fromRGB(255, 105, 180)
-            tmkxAutoRepeatBtn.Text = " TMKX REPEAT"
-            statusLabel.Text = " TMKX REPEAT STOPPED"
+            tmkxAutoRepeatBtn.Text = "TMKX REPEAT"
+            statusLabel.Text = "TMKX REPEAT STOPPED"
         end
     end)
 
     -- Close Button
     closeBtn.MouseButton1Click:Connect(function()
-        -- Stop auto repeat if active
-        if autoRepeating then
-            autoRepeating = false
-            if autoRepeatConnection then
-                autoRepeatConnection:Disconnect()
-            end
+        if autoRepeating and autoRepeatConnection then
+            autoRepeatConnection:Disconnect()
         end
         gui:Destroy()
     end)
 
     -- Success notification
     game:GetService("StarterGui"):SetCore("SendNotification", {
-        Title = " CHADDI GANG SPAMMER",
-        Text = "TMKX Spam + Custom Text + Advanced Drag loaded!",
+        Title = "CHADDI GANG SPAMMER",
+        Text = "Compact Mobile GUI Loaded!",
         Duration = 3
     })
 
     print("=======================================")
-    print(" CHADDI GANG SPAMMER ACTIVATED")
+    print(" COMPACT MOBILE SPAMMER ACTIVATED")
     print("Executor: " .. CurrentExecutor)
-    print("Features: TMKX Spam, Auto Repeat, Rainbow")
-    print("CUSTOM TEXT: Replace 'H8TER' with any text!")
-    print("ADVANCED DRAG SYSTEM: Toggle between drag modes")
-    print("TMKX Messages: 64 | Default Delay: 30s")
+    print("Features: TMKX Spam, Auto Repeat, Custom Text")
+    print("MOBILE OPTIMIZED: Compact design for mobile")
+    print("TMKX Messages: 32 | Default Delay: 30s")
     print("=======================================")
 end
 
