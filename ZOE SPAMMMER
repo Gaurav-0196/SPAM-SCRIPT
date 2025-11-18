@@ -478,7 +478,7 @@ function loadSpammerGUI()
     tmkxInfoLabel.Position = UDim2.new(0, 5, 0, 5)
     tmkxInfoLabel.BackgroundTransparency = 1
     tmkxInfoLabel.TextColor3 = Color3.fromRGB(200, 200, 255)
-    tmkxInfoLabel.Text = " TMKX SPAM READY\n32 pre-loaded messages\nCustom text enabled"
+    tmkxInfoLabel.Text = " TMKX SPAM READY\n64 pre-loaded messages\nCustom text enabled"
     tmkxInfoLabel.Font = Enum.Font.Gotham
     tmkxInfoLabel.TextSize = 11
     tmkxInfoLabel.TextWrapped = true
@@ -948,7 +948,7 @@ function loadSpammerGUI()
         multiModeBtn.BackgroundColor3 = Color3.fromRGB(40, 40, 60)
         tmkxModeBtn.BackgroundColor3 = Color3.fromRGB(148, 0, 211)
         
-        statusLabel.Text = " TMKX MODE\n32 pre-loaded messages ready\nCustomize 'H8TER' text above"
+        statusLabel.Text = " TMKX MODE\n64 pre-loaded messages ready\nCustomize 'H8TER' text above"
     end)
 
     -- Send Once Function
@@ -1136,9 +1136,9 @@ function loadSpammerGUI()
         
         -- Get delay from input
         currentDelay = tonumber(delayInput.Text) or 30
-        if currentDelay < 1 then
-            currentDelay = 1
-            delayInput.Text = "1"
+        if currentDelay < 2 then
+            currentDelay = 2
+            delayInput.Text = "2"
         end
         
         if not autoRepeating then
@@ -1163,7 +1163,7 @@ function loadSpammerGUI()
                     if success then
                         totalMessagesSent = totalMessagesSent + 1
                         statusLabel.TextColor3 = Color3.fromRGB(148, 0, 211)
-                        statusLabel.Text = string.format("🛍 TMKX %d/%d | Delay: %ds\nTotal: %d", currentIndex, #customTMKXMessages, currentDelay, totalMessagesSent)
+                        statusLabel.Text = string.format(" TMKX %d/%d | Delay: %ds\nTotal: %d", currentIndex, #customTMKXMessages, currentDelay, totalMessagesSent)
                     else
                         statusLabel.TextColor3 = Color3.fromRGB(255, 100, 100)
                         statusLabel.Text = string.format(" FAILED %d/%d", currentIndex, #customTMKXMessages)
@@ -1220,7 +1220,7 @@ function loadSpammerGUI()
     print("Features: TMKX Spam, Auto Repeat, Rainbow")
     print("CUSTOM TEXT: Replace 'H8TER' with any text!")
     print("ADVANCED DRAG SYSTEM: Toggle between drag modes")
-    print("TMKX Messages: 32 | Default Delay: 30s")
+    print("TMKX Messages: 64 | Default Delay: 30s")
     print("=======================================")
 end
 
